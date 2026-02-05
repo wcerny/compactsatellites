@@ -18,13 +18,13 @@ nav {
     background-color: #002b5c; /* match header */
     display: flex;
     justify-content: center;
-    width: 100%;       /* full width across the screen */
-    padding: 15px 0;   /* height of the bar */
+    width: 100%;
+    padding: 15px 0;
 }
 
 nav a {
     text-decoration: none;
-    color: white;       /* link color */
+    color: white;
     font-size: 18px;
     font-weight: bold;
     margin: 0 15px;
@@ -34,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255,255,255,0.2); /* hover effect */
+    background-color: rgba(255,255,255,0.2);
 }
 
 /* Active tab highlight */
@@ -56,6 +56,13 @@ main {
     gap: 20px;
     align-items: flex-start; /* top-align columns */
     margin-bottom: 40px;
+
+    /* NEW — Box around each result */
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .image-column {
@@ -66,14 +73,14 @@ main {
 .image-column img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 8px; /* keeps image corners smooth inside box */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .text-column {
     flex: 1;
     min-width: 300px;
-    display: block; /* ensures top alignment */
+    display: block;
 }
 
 .text-column h2 {
