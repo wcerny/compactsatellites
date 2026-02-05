@@ -8,20 +8,23 @@ body {
     line-height: 1.6;
 }
 
+/* Top navigation bar */
 header {
-    background-color: #001f3f;
-    padding: 15px 0;
+    background-color: #001f3f; /* navy */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
+    background-color: #001f3f; /* navy */
     display: flex;
     justify-content: center;
+    width: 100%;       /* full width across the screen */
+    padding: 15px 0;   /* height of the bar */
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: white;       /* link color */
     font-size: 18px;
     font-weight: bold;
     margin: 0 15px;
@@ -31,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.2); /* hover effect */
 }
 
 /* Active tab highlight */
