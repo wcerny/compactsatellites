@@ -10,12 +10,12 @@ body {
 
 /* Top navigation bar */
 header {
-    background-color: #002b5c; /* navy */
+    background-color: #002b5c; /* slightly brighter navy */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
-    background-color: #002b5c; /* navy */
+    background-color: #002b5c; /* match header */
     display: flex;
     justify-content: center;
     width: 100%;       /* full width across the screen */
@@ -54,7 +54,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
+    align-items: flex-start; /* top-align columns */
     margin-bottom: 40px;
 }
 
@@ -73,10 +73,12 @@ main {
 .text-column {
     flex: 1;
     min-width: 300px;
+    display: block; /* ensures top alignment */
 }
 
 .text-column h2 {
     font-size: 28px;
+    margin-top: 0;  /* flush with top of left image */
     margin-bottom: 15px;
 }
 
