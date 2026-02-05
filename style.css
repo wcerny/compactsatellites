@@ -77,13 +77,13 @@ main {
 }
 
 .text-column h2 {
-    font-size: 28px;
+    font-size: 25px;
     margin-top: 0;  /* flush with top of left image */
     margin-bottom: 15px;
 }
 
 .text-column p {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 /* Responsive adjustments */
