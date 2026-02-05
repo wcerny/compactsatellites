@@ -30,10 +30,13 @@
             box-shadow: 0 8px 18px rgba(0,0,0,0.12);
         }
 
+        /* Square image with padding */
         .paper-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+            width: calc(100% - 20px);   /* full width minus padding */
+            aspect-ratio: 1 / 1;        /* forces square shape */
+            object-fit: contain;         /* show entire image without cropping */
+            background-color: #f7f7f7;  /* fills empty space if image isn't square */
+            margin: 10px;                /* padding inside card */
         }
 
         .paper-card-content {
