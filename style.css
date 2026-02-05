@@ -1,57 +1,89 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    padding: 10px 0;
+    background-color: #007bff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-nav ul {
-    list-style-type: none;
+nav {
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
+nav a {
     text-decoration: none;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Active tab highlight */
+nav a.active {
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
 /* Two-column layout for results */
 .result-section {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .image-column {
     flex: 1;
     min-width: 300px;
-    padding: 10px;
 }
 
 .image-column img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .text-column {
     flex: 1;
     min-width: 300px;
-    padding: 10px;
+}
+
+.text-column h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.text-column p {
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media(max-width: 800px) {
+    .result-section {
+        flex-direction: column;
+    }
 }
