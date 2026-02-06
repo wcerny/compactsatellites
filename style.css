@@ -10,12 +10,12 @@ body {
 
 /* Top navigation bar */
 header {
-    background-color: #002b5c; /* slightly brighter navy */
+    background-color: #002b5c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
-    background-color: #002b5c; /* match header */
+    background-color: #002b5c;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -37,7 +37,6 @@ nav a:hover {
     background-color: rgba(255,255,255,0.2);
 }
 
-/* Active tab highlight */
 nav a.active {
     background-color: rgba(255,255,255,0.3);
 }
@@ -49,14 +48,13 @@ main {
     padding: 0 20px;
 }
 
-/* Two-column layout for results */
+/* Result boxes */
 .result-section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: flex-start;
     margin-bottom: 40px;
-
     background-color: white;
     border: 5px solid black;
     border-radius: 12px;
@@ -72,16 +70,14 @@ main {
 .image-column img {
     width: 100%;
     height: auto;
-
-    /* CHANGED — square edges + grey shadow */
-    border-radius: 0; 
-    box-shadow: 0 0 12px rgba(0,0,0,0.25); /* soft grey glow all around */
+    border-radius: 0;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+    cursor: zoom-in; /* shows user image is clickable */
 }
 
 .text-column {
     flex: 1;
     min-width: 300px;
-    display: block;
 }
 
 .text-column h2 {
@@ -94,7 +90,34 @@ main {
     font-size: 15px;
 }
 
-/* Responsive adjustments */
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.lightbox-img {
+    max-width: 95%;
+    max-height: 95%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive */
 @media(max-width: 800px) {
     .result-section {
         flex-direction: column;
