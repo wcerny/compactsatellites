@@ -48,7 +48,7 @@ main {
     padding: 0 20px;
 }
 
-/* Result boxes (DEFAULT LAYOUT) */
+/* Result boxes (default) */
 .result-section {
     display: flex;
     flex-wrap: wrap;
@@ -62,15 +62,19 @@ main {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Default two-column behavior */
+/* Columns */
 .image-column {
     flex: 1;
     min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .image-column img {
     width: 100%;
     height: auto;
+    border-radius: 0;
     box-shadow: 0 0 12px rgba(0,0,0,0.25);
     cursor: zoom-in;
 }
@@ -88,38 +92,6 @@ main {
 
 .text-column p {
     font-size: 15px;
-}
-
-/* ===================================================== */
-/* ⭐ SPECIAL PAPER-STYLE LAYOUT (Figure wraps with text) */
-/* ===================================================== */
-
-.figure-left-layout {
-    display: block; /* turn off flex */
-}
-
-.figure-left-layout .image-column {
-    float: left;
-    width: auto;
-    min-width: unset;
-    margin: 0 25px 15px 0;
-}
-
-.figure-left-layout .text-column {
-    display: block;
-}
-
-/* Smaller figure */
-.small-figure {
-    width: 280px;
-    max-width: 40vw;
-}
-
-/* Clear float */
-.figure-left-layout::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /* LIGHTBOX */
@@ -149,19 +121,43 @@ main {
     cursor: pointer;
 }
 
-/* Responsive */
+/* =========================
+   Special layout: small figure with flexible text
+   ========================= */
+.small-figure-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Shrink the image for just this section */
+.small-figure-section .image-column {
+    flex: 0 0 auto; /* image takes only as much space as needed */
+}
+
+.small-figure-section .small-figure {
+    width: 250px;   /* adjust size here */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Let text fill the remaining space */
+.small-figure-section .text-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Responsive adjustments */
 @media(max-width: 800px) {
-    .result-section {
+    .result-section,
+    .small-figure-section {
         flex-direction: column;
     }
 
-    .figure-left-layout .image-column {
-        float: none;
-        margin: 0 auto 20px auto;
-        text-align: center;
-    }
-
-    .small-figure {
+    .small-figure-section .small-figure {
         width: 80%;
+        margin: 0 auto;
     }
 }
