@@ -65,16 +65,29 @@ main {
 .image-column {
     flex: 1;
     min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+/* DEFAULT figure style (all images) */
 .image-column img {
     width: 100%;
     height: auto;
     border-radius: 0;
     box-shadow: 0 0 12px rgba(0,0,0,0.25);
-    cursor: zoom-in; /* shows user image is clickable */
+    cursor: zoom-in;
 }
 
+/* ⭐ SPECIAL smaller figures (like Figure 6) */
+.small-figure {
+    width: 65%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Text column */
 .text-column {
     flex: 1;
     min-width: 300px;
@@ -121,5 +134,9 @@ main {
 @media(max-width: 800px) {
     .result-section {
         flex-direction: column;
+    }
+
+    .small-figure {
+        width: 80%;
     }
 }
