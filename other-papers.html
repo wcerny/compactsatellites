@@ -42,6 +42,14 @@
             box-shadow: 0 8px 18px rgba(0,0,0,0.12);
         }
 
+        /* Title ABOVE image */
+        .paper-title {
+            font-size: 22px;
+            margin: 18px 20px 0 20px;
+            text-align: center;
+            line-height: 1.25;
+        }
+
         .paper-card img {
             width: calc(100% - 20px);
             aspect-ratio: 1 / 1;
@@ -50,26 +58,21 @@
             margin: 10px;
         }
 
-        /* ✨ CENTERED CARD CONTENT */
+        /* Content area */
         .paper-card-content {
-            padding: 20px;
+            padding: 16px 22px 22px 22px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            text-align: center;      /* centers text */
-            align-items: center;     /* centers block elements */
-        }
-
-        .paper-card h2 {
-            font-size: 22px;
-            margin: 0;
-            max-width: 95%;          /* slightly tighter title width */
+            gap: 12px;
+            text-align: center;
+            align-items: center;
+            flex-grow: 1;
         }
 
         .paper-card p {
             font-size: 16px;
             margin: 0;
-            max-width: 90%;          /* tighter paragraph width */
+            max-width: 100%;
         }
 
         .paper-links {
@@ -111,41 +114,52 @@
 
     <div class="papers-grid">
 
+        <!-- CARD 1 -->
         <div class="paper-card">
+            <h2 class="paper-title">Discovery of DELVE 6</h2>
             <img src="resources/DELVE6_Image.png" alt="DELVE 6 Figure">
             <div class="paper-card-content">
-                <h2>Discovery of DELVE 6</h2>
                 <p>
                     We present the discovery of DELVE~6, an ultra-faint compact satellite located just $\sim 10\deg$ on sky from the center of the Small Magellanic Cloud yet quite distant ($D \approx 80$~kpc).
                 </p>
                 <div class="paper-links">
-                    <a href="https://arxiv.org/abs/2306.04690" target="_blank">Read the Paper <br> (W. Cerny et al 2023 ApJL 953 L21) →</a>
+                    <a href="https://arxiv.org/abs/2306.04690" target="_blank">
+                        Read the Paper <br> (W. Cerny et al 2023 ApJL 953 L21) →
+                    </a>
                 </div>
             </div>
         </div>
 
+        <!-- CARD 2 -->
         <div class="paper-card">
+            <h2 class="paper-title">DELVE 1 and Eridanus III</h2>
             <img src="resources/UMaIII_Spatial.png" alt="DELVE 1 and Eridanus III Figure">
             <div class="paper-card-content">
-                <h2>DELVE 1 and Eridanus III</h2>
                 <p>
-                    We present both medium and high-resolution spectroscopy of stars in the ultra-faint compact satellites DELVE 1 and Eridanus III
+                    We present both medium and high-resolution spectroscopy of stars in the ultra-faint compact satellites DELVE 1 and Eridanus III.
                 </p>
                 <div class="paper-links">
-                    <a href="https://arxiv.org/abs/2410.08276" target="_blank">Read the Paper <br> (J. D. Simon et al 2024 ApJ 976 256) →</a>
+                    <a href="https://arxiv.org/abs/2410.08276" target="_blank">
+                        Read the Paper <br> (J. D. Simon et al 2024 ApJ 976 256) →
+                    </a>
                 </div>
             </div>
         </div>
 
+        <!-- CARD 3 -->
         <div class="paper-card">
+            <h2 class="paper-title">
+                Stellar Kinematics and Chemistries in Ursa Major III / UNIONS 1: the faintest known MW satellite
+            </h2>
             <img src="resources/UMaIII_Spatial.png" alt="Ursa Major III Figure">
             <div class="paper-card-content">
-                <h2>Stellar Kinematics and Chemistries <br> in Ursa Major III / UNIONS 1: <br> the faintest known MW satellite</h2>
                 <p>
                     We present new Keck II/DEIMOS and Keck I/LRIS spectroscopy of UMaIII/U1: the lowest-luminosity old stellar population known in the universe.
                 </p>
                 <div class="paper-links">
-                    <a href="https://arxiv.org/abs/2510.02431" target="_blank">Read Paper <br> (W. Cerny et al. 2025, ApJL in press) →</a>
+                    <a href="https://arxiv.org/abs/2510.02431" target="_blank">
+                        Read Paper <br> (W. Cerny et al. 2025, ApJL in press) →
+                    </a>
                 </div>
             </div>
         </div>
