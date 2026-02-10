@@ -19,8 +19,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    
-    <!-- Page-specific styles for paper cards -->
     <style>
         .papers-grid {
             display: grid;
@@ -44,7 +42,6 @@
             box-shadow: 0 8px 18px rgba(0,0,0,0.12);
         }
 
-        /* Square image with padding */
         .paper-card img {
             width: calc(100% - 20px);
             aspect-ratio: 1 / 1;
@@ -53,21 +50,26 @@
             margin: 10px;
         }
 
+        /* ✨ CENTERED CARD CONTENT */
         .paper-card-content {
             padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            text-align: center;      /* centers text */
+            align-items: center;     /* centers block elements */
         }
 
         .paper-card h2 {
             font-size: 22px;
             margin: 0;
+            max-width: 95%;          /* slightly tighter title width */
         }
 
         .paper-card p {
             font-size: 16px;
             margin: 0;
+            max-width: 90%;          /* tighter paragraph width */
         }
 
         .paper-links {
@@ -83,75 +85,72 @@
             transition: color 0.2s ease, text-decoration 0.2s ease;
         }
 
-        /* Hover effect for links */
         .paper-links a:hover {
             color: #0056a0;
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Paper I: Summary</a>
-            <a href="data-products.html">Tables and Data</a>
-            <a href="other-papers.html" class="active">Other Papers</a>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="index.html">Paper I: Summary</a>
+        <a href="data-products.html">Tables and Data</a>
+        <a href="other-papers.html" class="active">Other Papers</a>
+    </nav>
+</header>
 
-    <main>
-        <h1 style="text-align:center; font-size:36px; margin-bottom:10px;">
-            Other Ultra-Faint Compact Satellite Papers
-        </h1>
-        <p style="text-align:center; font-size:18px; max-width:800px; margin:0 auto 20px;">
-            Below, we highlight related work by our team studying the Milky Way's ultra-faint compact satellite population. 
-        </p>
+<main>
+    <h1 style="text-align:center; font-size:36px; margin-bottom:10px;">
+        Other Ultra-Faint Compact Satellite Papers
+    </h1>
+    <p style="text-align:center; font-size:18px; max-width:800px; margin:0 auto 20px;">
+        Below, we highlight related work by our team studying the Milky Way's ultra-faint compact satellite population.
+    </p>
 
-        <div class="papers-grid">
+    <div class="papers-grid">
 
-            <!-- Card 1 -->
-            <div class="paper-card">
-                <img src="resources/DELVE6_Image.png" alt="DELVE 6 Figure">
-                <div class="paper-card-content">
-                    <h2>Discovery of DELVE 6</h2>
-                    <p>
-                        We present the discovery of DELVE~6, an ultra-faint compact satellite located just $\sim 10\deg$ on sky from the center of the Small Magellanic Cloud yet quite distant ($D \approx 80$~kpc).
-                    </p>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2306.04690" target="_blank">Read the Paper <br> (W. Cerny et al 2023 ApJL 953 L21) →</a>
-                    </div>
+        <div class="paper-card">
+            <img src="resources/DELVE6_Image.png" alt="DELVE 6 Figure">
+            <div class="paper-card-content">
+                <h2>Discovery of DELVE 6</h2>
+                <p>
+                    We present the discovery of DELVE~6, an ultra-faint compact satellite located just $\sim 10\deg$ on sky from the center of the Small Magellanic Cloud yet quite distant ($D \approx 80$~kpc).
+                </p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2306.04690" target="_blank">Read the Paper <br> (W. Cerny et al 2023 ApJL 953 L21) →</a>
                 </div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="paper-card">
-                <img src="resources/UMaIII_Spatial.png" alt="DELVE 1 and Eridanus III Figure">
-                <div class="paper-card-content">
-                    <h2>DELVE 1 and Eridanus III</h2>
-                    <p>
-                        We present both medium and high-resolution spectroscopy of stars in the ultra-faint compact satellites DELVE 1 and Eridanus III
-                    </p>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2410.08276" target="_blank">Read the Paper <br> (J. D. Simon et al 2024 ApJ 976 256) →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="paper-card">
-                <img src="resources/UMaIII_Spatial.png" alt="Ursa Major III Figure">
-                <div class="paper-card-content">
-                    <h2>Stellar Kinematics and Chemistries <br> in Ursa Major III / UNIONS 1: <br> the faintest known MW satellite</h2>
-                    <p>
-                        We present new Keck II/DEIMOS and Keck I/LRIS spectroscopy of UMaIII/U1: the lowest-luminosity old stellar population known in the universe.
-                    </p>
-                    <div class="paper-links">
-                        <a href="https://arxiv.org/abs/2510.02431" target="_blank">Read Paper <br> (W. Cerny et al. 2025, ApJL in press) →</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </main>
+
+        <div class="paper-card">
+            <img src="resources/UMaIII_Spatial.png" alt="DELVE 1 and Eridanus III Figure">
+            <div class="paper-card-content">
+                <h2>DELVE 1 and Eridanus III</h2>
+                <p>
+                    We present both medium and high-resolution spectroscopy of stars in the ultra-faint compact satellites DELVE 1 and Eridanus III
+                </p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2410.08276" target="_blank">Read the Paper <br> (J. D. Simon et al 2024 ApJ 976 256) →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <img src="resources/UMaIII_Spatial.png" alt="Ursa Major III Figure">
+            <div class="paper-card-content">
+                <h2>Stellar Kinematics and Chemistries <br> in Ursa Major III / UNIONS 1: <br> the faintest known MW satellite</h2>
+                <p>
+                    We present new Keck II/DEIMOS and Keck I/LRIS spectroscopy of UMaIII/U1: the lowest-luminosity old stellar population known in the universe.
+                </p>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2510.02431" target="_blank">Read Paper <br> (W. Cerny et al. 2025, ApJL in press) →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
 </body>
 </html>
