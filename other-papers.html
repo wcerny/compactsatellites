@@ -22,9 +22,25 @@
     <style>
         .papers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            grid-template-columns: repeat(3, minmax(420px, 1fr)); /* wider cards, 3 per row */
             gap: 30px;
             margin-top: 30px;
+            max-width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1300px) {
+            .papers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .papers-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .paper-card {
