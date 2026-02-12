@@ -185,3 +185,18 @@ br.tiny {
     line-height: 0;      /* Remove extra line spacing */
     margin: 4px 0;       /* Adjust vertical space (top & bottom) */
 }
+
+/* ==========================
+   Minimal fix for wide header text spacing
+   ========================== */
+
+/* Target only the wide header section */
+.result-section.section-wide {
+    padding-top: 10px;   /* reduce top padding from 25px to 10px */
+}
+
+/* Remove extra margin on the text column inside wide section */
+.result-section.section-wide .text-column {
+    margin-top: 0;
+    padding-top: 0;
+}
