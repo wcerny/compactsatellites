@@ -53,7 +53,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
     margin-bottom: 40px;
     background-color: white;
     border: 5px solid black;
@@ -67,8 +66,8 @@ main {
     flex: 1;
     min-width: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
 }
 
 .image-column img {
@@ -125,26 +124,31 @@ main {
 /* =========================
    Special layout: small figure with flexible text
    ========================= */
+
 .small-figure-section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
+    margin-bottom: 40px;
 }
 
-/* Shrink the image for just this section */
+/* Image column (keep centered) */
 .small-figure-section .image-column {
-    flex: 0 0 auto; /* image takes only as much space as needed */
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Smaller image */
 .small-figure-section .small-figure {
-    width: 340px;   /* adjust size here */
+    width: 340px;
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Let text fill the remaining space */
+/* Let text fill remaining space */
 .small-figure-section .text-column {
     flex: 1;
     min-width: 200px;
