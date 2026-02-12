@@ -137,7 +137,7 @@ main {
 }
 
 .small-figure-section .small-figure {
-    width: 300px;   /* adjust size here */
+    width: 340px;   /* adjust size here */
     max-width: 100%;
     height: auto;
     display: block;
