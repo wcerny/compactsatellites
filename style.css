@@ -66,8 +66,8 @@ main {
     flex: 1;
     min-width: 300px;
     display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical center */
+    justify-content: center;
+    align-items: center;
 }
 
 .image-column img {
@@ -165,4 +165,16 @@ main {
         width: 80%;
         margin: 0 auto;
     }
+}
+
+/* =====================================
+   NEW: Full-width section title support
+   ===================================== */
+
+.result-section > .section-wide-title {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
 }
