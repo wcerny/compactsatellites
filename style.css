@@ -179,3 +179,9 @@ main {
     margin-bottom: 0px;
     font-size: 25px;
 }
+
+br.tiny {
+    display: block;      /* Make it behave like a block so height works */
+    line-height: 0;      /* Remove extra line spacing */
+    margin: 4px 0;       /* Adjust vertical space (top & bottom) */
+}
