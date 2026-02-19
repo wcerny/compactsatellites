@@ -71,6 +71,14 @@ main {
     align-items: center;
 }
 
+/* Figure wrapper for image + caption */
+.image-column figure {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Image styling */
 .image-column img {
     width: 100%;
     height: auto;
@@ -79,6 +87,18 @@ main {
     cursor: zoom-in;
 }
 
+/* Caption styling */
+.image-column figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text column */
 .text-column {
     flex: 1;
     min-width: 300px;
@@ -181,21 +201,19 @@ main {
 }
 
 br.tiny {
-    display: block;      /* Make it behave like a block so height works */
-    line-height: 0;      /* Remove extra line spacing */
-    margin: 4px 0;       /* Adjust vertical space (top & bottom) */
+    display: block;
+    line-height: 0;
+    margin: 4px 0;
 }
 
 /* ==========================
    Minimal fix for wide header text spacing
    ========================== */
 
-/* Target only the wide header section */
 .result-section.section-wide {
-    padding-top: 10px;   /* reduce top padding from 25px to 10px */
+    padding-top: 10px;
 }
 
-/* Remove extra margin on the text column inside wide section */
 .result-section.section-wide .text-column {
     margin-top: 0;
     padding-top: 0;
