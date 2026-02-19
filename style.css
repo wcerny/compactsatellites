@@ -66,9 +66,7 @@ main {
 .image-column {
     flex: 1;
     min-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;   /* ← CHANGE THIS */
+    text-align: center;   /* centers image + caption */
 }
 
 /* Figure wrapper for image + caption */
